@@ -10,18 +10,16 @@ const ControlPane = ({
   type,
   options,
   currentOption,
-  handleSelectOption,
+  handleSelectOption
 }) => {
   return (
     <div className={styles.controlPane}>
       <h2 className={styles.title}>
         {title}
 
-        <span className={styles.metadata}>
-          {options.length} options
-        </span>
+        <span className={styles.metadata}>{options.length} options</span>
       </h2>
-      <ButtonRow>
+      <ButtonRow className={styles.buttonRow}>
         {options.map(({ id, label, color, children }) => (
           <ToggleButton
             key={id}
